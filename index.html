@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
   <title>HTML5 and CSS3 site</title>
 </head>
 <body>
@@ -26,6 +26,13 @@
         scrollTop: $(id).offset().top
       }, 500);
     }
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else {
+        $("header").attr("class","fixed");
+      }
+    });
   </script>
 </body>
 </html>
