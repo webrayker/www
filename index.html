@@ -19,19 +19,31 @@
       <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
     </div>
   </header>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <div id="top">
+    <h1>Программирование</h1>
+    <h3>как способ жизни!</h3>
+  </div>
+  <div id="main">
+    <div class="intro">
+      <h2>Наши услуги помогут вам!</h2>
+      <span>Большой выбор всего, что может вам пригодится</span>
+    </div>
+    <div class="text">
+      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A delectus incidunt officia corrupti, labore iusto doloribus dolorum dolore numquam odio fuga, cumque mollitia laboriosam quia amet nemo autem ducimus nesciunt in neque fugiat asperiores totam animi. Omnis magni itaque eum in numquam. Ab deserunt, beatae cupiditate ratione vel, ipsam reiciendis.</span>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
     function slowScroll(id) {
-      $('body').animate({
+      $('html, body').animate({
         scrollTop: $(id).offset().top
       }, 500);
     }
     $(document).on("scroll", function () {
       if($(window).scrollTop() === 0)
         $("header").removeClass("fixed");
-      else {
-        $("header").attr("class","fixed");
-      }
+      else
+        $("header").attr("class", "fixed");
     });
   </script>
 </body>
